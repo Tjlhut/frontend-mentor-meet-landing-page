@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 6.4rem;
+}
+
+p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+}
+
+.btn-primary {
+  background-color: #4d96a9;
+}
+
+.btn-primary .accent {
+  color: #8fe3f9;
+}
+
+.btn-secondary {
+  background-color: #855fb1;
+}
+
+.btn-secondary .accent {
+  color: #d9b8ff;
+}
+
+.btn {
+  color: #ffffff;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.6rem;
+  padding: 1.8rem 3.4rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.landing-page {
+  min-height: 100vh;
+}
+
+.landing-page .logo {
+  padding-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.landing-page .hero {
+  overflow: hidden;
+  padding-top: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.landing-page .hero .hero-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.landing-page .hero .hero-text h1 {
+  color: #28283d;
+  text-align: center;
+  line-height: 100%;
+}
+
+.landing-page .hero .hero-text p {
+  padding-top: 3rem;
+  width: 54rem;
+  color: #87879d;
+  text-align: center;
+}
+
+.landing-page .hero .hero-text .buttons {
+  margin-top: 4.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.landing-page .hero .hero-text .btn-primary {
+  margin-right: 0.5rem;
+}
+
+.landing-page .hero .hero-text .btn-secondary {
+  margin-left: 0.5rem;
+}
+
+.landing-page .hero .image-hero.left {
+  -webkit-transform: translate(-8%, -5%);
+          transform: translate(-8%, -5%);
+}
+
+.landing-page .hero .image-hero.right {
+  -webkit-transform: translateX(8%);
+          transform: translateX(8%);
+}
+/*# sourceMappingURL=style.css.map */

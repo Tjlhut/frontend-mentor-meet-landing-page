@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+// Scaling factor: 1920px/1440px = 4/3
+
 // Could make this a variable...
 html {
   font-family: "Red Hat Display", sans-serif;
@@ -21,10 +23,18 @@ p {
   line-height: 2.6rem;
 }
 
+.btn {
+  transition: 0.4s;
+  cursor: pointer;
+}
+
 .btn-primary {
   background-color: #4d96a9;
   .accent {
     color: #8fe3f9;
+  }
+  &:hover {
+    background-color: #71c0d4;
   }
 }
 
@@ -32,6 +42,9 @@ p {
   background-color: #855fb1;
   .accent {
     color: #d9b8ff;
+  }
+  &:hover {
+    background-color: #b18bdd;
   }
 }
 
@@ -47,6 +60,8 @@ p {
 
 .landing-page {
   min-height: 100vh;
+  max-width: 1440px;
+  margin: auto;
   .logo {
     padding-top: 4rem;
     display: flex;
@@ -91,17 +106,25 @@ p {
       }
     }
 
-    // .image-hero {
-    //   img {
-    //     width: 500px;
-    //   }
-    // }
-    // Images section
+    // Side images
     .image-hero.left {
       transform: translate(-8%, -5%);
     }
     .image-hero.right {
       transform: translateX(8%);
+    }
+  }
+
+  //   Gallery Section
+
+  section.gallery {
+    width: 77%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    img {
+      width: 21%;
+      border-radius: 2rem;
     }
   }
 }

@@ -20,6 +20,12 @@ p {
   line-height: 2.6rem;
 }
 
+.btn {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
 .btn-primary {
   background-color: #4d96a9;
 }
@@ -28,12 +34,20 @@ p {
   color: #8fe3f9;
 }
 
+.btn-primary:hover {
+  background-color: #71c0d4;
+}
+
 .btn-secondary {
   background-color: #855fb1;
 }
 
 .btn-secondary .accent {
   color: #d9b8ff;
+}
+
+.btn-secondary:hover {
+  background-color: #b18bdd;
 }
 
 .btn {
@@ -48,6 +62,8 @@ p {
 
 .landing-page {
   min-height: 100vh;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .landing-page .logo {
@@ -120,5 +136,21 @@ p {
 .landing-page .hero .image-hero.right {
   -webkit-transform: translateX(8%);
           transform: translateX(8%);
+}
+
+.landing-page section.gallery {
+  width: 77%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.landing-page section.gallery img {
+  width: 21%;
+  border-radius: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

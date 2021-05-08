@@ -4,23 +4,40 @@
   box-sizing: border-box;
 }
 
-// Scaling factor: 1920px/1440px = 4/3
-
-// Could make this a variable...
 html {
   font-family: "Red Hat Display", sans-serif;
   //   1rem = 10px
   font-size: 62.5%;
+  //   Font size at 10px when screen width == 1440
+  //   font-size: calc(100 * 10vw / 1440);
 }
 
 h1 {
   font-size: 6.4rem;
+  font-weight: 900;
+  line-height: 100%;
 }
 
 p {
   font-size: 1.8rem;
   font-weight: 500;
-  line-height: 2.6rem;
+  line-height: 145%;
+  color: #87879d;
+}
+
+// Overline
+h5 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.4rem;
+  line-height: 162.5%;
+  color: #4d96a9;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 110%;
 }
 
 .btn {
@@ -53,15 +70,43 @@ p {
   border: none;
   border-radius: 5rem;
   font-size: 1.6rem;
+  line-height: 2.6rem;
   padding: 1.8rem 3.4rem;
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 900;
+}
+
+// icon design
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .numbered-dot {
+    height: 5.6rem;
+    width: 5.6rem;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #87879d;
+    background-color: #fafafa;
+    line-height: 2.6rem;
+    border-radius: 50%;
+    border: rgba($color: #87879d, $alpha: 0.25) 0.1rem solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .vertical-line {
+    height: 8.4rem;
+    width: 0.1rem;
+    background-color: #d8d8d8;
+  }
 }
 
 .landing-page {
   min-height: 100vh;
-  max-width: 1440px;
+  // max-width: 1440px;
   margin: auto;
+  background-color: #fafafa;
   .logo {
     padding-top: 4rem;
     display: flex;
@@ -69,6 +114,7 @@ p {
   }
 
   .hero {
+    padding-bottom: 11.4rem;
     overflow: hidden;
     padding-top: 7rem;
     display: flex;
@@ -90,7 +136,6 @@ p {
         //   540px according to figma sketch
         padding-top: 3rem;
         width: 54rem;
-        color: #87879d;
         text-align: center;
       }
       .buttons {
@@ -105,7 +150,11 @@ p {
         margin-left: 0.5rem;
       }
     }
-
+    .image-hero {
+      img {
+        width: 39.4rem;
+      }
+    }
     // Side images
     .image-hero.left {
       transform: translate(-8%, -5%);
@@ -118,6 +167,8 @@ p {
   //   Gallery Section
 
   section.gallery {
+    padding-top: 6.4rem;
+    padding-bottom: 8rem;
     width: 77%;
     margin: auto;
     display: flex;
@@ -127,4 +178,80 @@ p {
       border-radius: 2rem;
     }
   }
+
+  // Text body section
+
+  section.description {
+    //   Why can't I set it here???
+    // margin-bottom: 7.2rem;
+    width: 54rem;
+    height: 24rem;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  // Icon 2
+
+  .icon-2 {
+    //   Drop the icon down by half the dot's diameter
+    transform: translateY(2.8rem);
+    z-index: 2;
+    position: relative;
+  }
+
+  //   Footer
+  footer {
+    position: relative;
+    z-index: 1;
+    &::after {
+      content: "";
+      background-image: url("./assets/desktop/image-footer.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      left: 0;
+      opacity: 0.1;
+      z-index: -1;
+    }
+    width: 100%;
+    height: 30.8rem;
+    background-color: #4d96a9;
+
+    .footer-items {
+      height: 100%;
+      width: 110rem;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h2,
+      p {
+        color: #fafafa;
+      }
+      p {
+        width: 35rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1340px) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 1075px) {
 }
